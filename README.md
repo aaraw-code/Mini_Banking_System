@@ -51,7 +51,7 @@ while True:
             accounts[acc_no] = new_account
             print("Account created succesfully!")
 
-            with open("account.json","w") as f:
+            with open("account.json","w") as f:                           # this is to save the data into file format
                 json.dump({acc_no: account.__dict__ for acc_no, account in accounts.items()},f,indent="4")
     if ask == "2":
         acc_no = input("Enter your account number: ")
